@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 const INITIAL_STATE = {
-  todo: []
+  todos: []
 };
 
 function rootReducer(state = INITIAL_STATE, action) {
@@ -10,8 +10,7 @@ function rootReducer(state = INITIAL_STATE, action) {
       ...state,
       todos: [
         ...state.todos, {task: action.task, id: uuidv4()}
-      ]
-    };
+      ]}
   }
   if (action.type === "REMOVE_TODO") {
     return {

@@ -11,12 +11,12 @@ function TodoList() {
   const handleAdd = (task) => dispatch({ type: "ADD_TODO", task });
   const handleRemove = (id) => dispatch({ type: "REMOVE_TODO", id });
 
-  const allTodos = todos.map(t => (
+  const allTodos = todos.map(todo => (
     <Todo
-      key={t.id}
-      id={t.id}
-      task={t.task}
-      remove={handleRemove}
+      key={todo.id}
+      id={todo.id}
+      task={todo.task}
+      removeTodo={handleRemove}
     />
   ));
 
